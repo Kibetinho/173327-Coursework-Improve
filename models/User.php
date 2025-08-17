@@ -1,9 +1,10 @@
 <?php
-
-require_once __DIR__ . '/../config/connection.php';
+require_once('config/connection.php');
 
 class User
 {
+    private $db;
+
     public int $userId;
     public string $fullName;
     public string $email;
