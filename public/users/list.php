@@ -18,7 +18,7 @@ if ($auth['type'] === USER_TYPE_AUTHOR) {
 $only = $_GET['only'] ?? '';
 $limitToAuthors = $only === 'authors' || $auth['type'] === USER_TYPE_ADMIN;
 
-// Super can manage all; Admin manages only Authors and cannot touch Super_User
+// Get users list
 $users = $limitToAuthors ? User::listAll(USER_TYPE_AUTHOR) : User::listAll();
 ?>
 <!doctype html>
@@ -51,10 +51,6 @@ $users = $limitToAuthors ? User::listAll(USER_TYPE_AUTHOR) : User::listAll();
             <th>Actions</th>
         </tr>
         <?php foreach ($users as $u): ?>
-            <?php
-            // Admin can only see Authors
-            if ($auth['type'] === USER_TYPE_ADMIN && $u->userType !== USER_TYPE_AUTHOR) continue;
-            ?>
             <tr>
                 <td><?= $u->userId ?></td>
                 <td><?= htmlspecialchars($u->userName) ?></td>
@@ -63,7 +59,10 @@ $users = $limitToAuthors ? User::listAll(USER_TYPE_AUTHOR) : User::listAll();
                 <td><?= htmlspecialchars($u->userType) ?></td>
                 <td>
                     <a class="btn" href="edit.php?id=<?= $u->userId ?>">Edit</a>
-                    <?php if (!($u->userType === USER_TYPE_SUPER && $auth['type'] !== USER_TYPE_SUPER)): ?>
+                    <?php
+                    // Only Super can delete Super, Admin cannot delete Super
+                    $canDelete = !($u->userType === USER_TYPE_SUPER && $auth['type'] !== USER_TYPE_SUPER);
+                    if ($canDelete): ?>
                         <a class="btn" href="delete.php?id=<?= $u->userId ?>&csrf_token=<?= urlencode(Security::csrfToken()) ?>" onclick="return confirm('Delete this user?');">Delete</a>
                     <?php endif; ?>
                 </td>
