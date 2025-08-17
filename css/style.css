@@ -32,7 +32,6 @@ button:hover, input[type="submit"]:hover {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 2em;
     background: #fff;
     box-shadow: 0 2px 8px rgba(44, 62, 80, 0.05);
@@ -51,7 +50,6 @@ button:hover, input[type="submit"]:hover {
 
 .dashboard-content {
     padding: 2em;
-    background-color: #f5f7fa;
 }
 
 .dashboard-card {
