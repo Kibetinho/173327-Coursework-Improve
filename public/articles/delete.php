@@ -20,5 +20,8 @@ if ($auth['type'] === USER_TYPE_AUTHOR && $article->authorId !== $auth['id']) {
 Article::delete($id);
 header('Location: list.php' . ($auth['type'] === USER_TYPE_AUTHOR ? '?mine=1' : ''));
 exit;
+?>
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/article.css">
 
 

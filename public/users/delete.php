@@ -25,5 +25,8 @@ if ($target->userType === USER_TYPE_SUPER && $auth['type'] !== USER_TYPE_SUPER) 
 User::delete($id);
 header('Location: list.php' . ($auth['type'] === USER_TYPE_ADMIN ? '?only=authors' : ''));
 exit;
+?>
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/user.css">
 
 

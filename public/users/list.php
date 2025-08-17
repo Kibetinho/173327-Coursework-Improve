@@ -25,6 +25,8 @@ $users = $limitToAuthors ? User::listAll(USER_TYPE_AUTHOR) : User::listAll();
 <head>
     <meta charset="utf-8">
     <title>Manage Users</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/user.css">
     <style> body{font-family:Arial;margin:24px;} table{border-collapse:collapse;width:100%} th,td{border:1px solid #ccc;padding:8px;text-align:left} a.btn{padding:6px 10px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;margin-right:6px} </style>
 </head>
 <body>

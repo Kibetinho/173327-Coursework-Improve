@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!doctype html>
 <html>
 <head><meta charset="utf-8"><title>Edit Article</title>
-<style> body{font-family:Arial;margin:24px;} label{display:block;margin-top:8px} input,textarea{width:600px;padding:8px} textarea{height:160px} button{margin-top:12px;padding:10px 14px}</style>
+<link rel="stylesheet" href="/css/general.css">
+<link rel="stylesheet" href="/css/article.css">
 </head>
 <body>
     <h2>Edit Article #<?= $article->articleId ?></h2>

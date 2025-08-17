@@ -17,7 +17,8 @@ $articles = Article::listAll($mine ? $auth['id'] : null);
 <head>
     <meta charset="utf-8">
     <title>Manage Articles</title>
-    <style> body{font-family:Arial;margin:24px;} table{border-collapse:collapse;width:100%} th,td{border:1px solid #ccc;padding:8px;text-align:left} a.btn{padding:6px 10px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;margin-right:6px} </style>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/article.css">
 </head>
 <body>
     <h2><?= $mine ? 'My Articles' : 'All Articles' ?></h2>
