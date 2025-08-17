@@ -27,6 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 	<meta charset="utf-8">
 	<title><?= htmlspecialchars(APP_NAME) ?> - Sign In</title>
+	<link rel="stylesheet" href="/css/general.css">
+	<link rel="stylesheet" href="/css/user.css">
 	<style>
 		body { font-family: Arial, sans-serif; background:#f5f5f5; }
 		.card { width: 360px; margin: 10% auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }

@@ -54,7 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="utf-8">
     <title>Update Profile</title>
-    <style> body{font-family:Arial;margin:24px;} label{display:block;margin-top:8px} input{width:360px;padding:8px} button{margin-top:12px;padding:10px 14px} .note{color: #666}</style>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/user.css">
 </head>
 <body>
     <h2>Update My Profile</h2>

@@ -14,7 +14,8 @@ function linkTo(string $path, string $label): string {
 <head>
     <meta charset="utf-8">
     <title><?= htmlspecialchars(APP_NAME) ?> - Dashboard</title>
-    <style> body{font-family:Arial;margin:24px;} a{display:inline-block;padding:10px 14px;margin:6px;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;} a:hover{background:#125aa0}</style>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
     <h2>Welcome, <?= htmlspecialchars($user['name']) ?> (<?= htmlspecialchars($user['type']) ?>)</h2>
