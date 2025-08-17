@@ -1,6 +1,5 @@
 <?php
-
-require_once __DIR__ . '/../config/connection.php';
+require_once('config/connection.php');
 
 class Article
 {
@@ -88,5 +87,17 @@ class Article
         return array_map(fn($r) => new Article($r), $stmt->fetchAll());
     }
 }
+
+class User {
+    private $db;
+    public function __construct($db) { $this->db = $db; }
+
+    public function create($data) { /* ... */ }
+    public function update($userId, $data) { /* ... */ }
+    public function delete($userId) { /* ... */ }
+    public function get($userId) { /* ... */ }
+    public function getAll() { /* ... */ }
+}
+?>
 
 
