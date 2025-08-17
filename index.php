@@ -1,7 +1,7 @@
 <?php
 require_once('config/connection.php');
-require_once __DIR__ . '/Coursework/services/Auth.php';
-require_once __DIR__ . '/Coursework/services/Security.php';
+require_once __DIR__ . '/services/Auth.php';
+require_once __DIR__ . '/services/Security.php';
 
 Auth::startSession();
 if (!empty($_SESSION['user'])) {
